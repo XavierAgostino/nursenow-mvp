@@ -1,70 +1,88 @@
-# NurseNow - Healthcare Staffing MVP Landing Page
+# NurseNow Landing Page
 
-A modern, professional landing page for NurseNow, an on-demand nurse staffing marketplace that connects healthcare facilities with verified nurses.
+A professional landing page prototype for NurseNow, a healthcare staffing marketplace connecting medical facilities with qualified nurses for on-demand shift coverage.
 
-## 🚀 Live Demo
+## Live Demo
 
-[View Live Site](https://your-vercel-url.vercel.app) _(will be updated after deployment)_
+[View Live Site](https://nursenow-mvp.vercel.app/)
 
-## 📋 Project Overview
+## About This Project
 
-**Product**: NurseNow — on-demand nurse staffing platform where clinics post shifts and nurses pick them up.
+This landing page was developed as part of an entrepreneurship course assignment focused on rapid MVP development and market validation. The project demonstrates how modern web technologies can be used to quickly test startup concepts and gather user feedback.
 
-**Goal**: Validate market demand and user interest through a conversion-optimized landing page.
+**NurseNow Concept**: A digital platform where healthcare facilities can post open nursing shifts and licensed nurses can browse and accept positions that match their schedule and expertise.
 
-## ✨ Features
+## Assignment Context
 
-- **Modern Design**: Clean, professional healthcare-focused UI
-- **Dual Value Props**: Separate benefits for clinics and nurses
-- **Social Proof**: Hospital logos and testimonials
-- **Trust Indicators**: HIPAA compliance, insurance coverage
-- **Mobile Responsive**: Optimized for all devices
-- **Interactive Elements**: Smooth animations and hover effects
+**Course**: ENG-SCI 30 - Startups: From Idea to Exit  
+**Institution**: Harvard University, Faculty of Arts & Sciences  
+**Assignment**: Assignment #3: MVPs, In Theory and Practice (Part 2)  
+**Objective**: Design and build an MVP landing page to validate core business assumptions using AI-powered development tools
 
-## 🛠 Tech Stack
+This project represents Part 2 of a comprehensive MVP analysis assignment. Part 1 involved analyzing potential MVPs for established tech companies and developing an MVP strategy for NurseNow. Part 2 required using "vibe coding" tools to rapidly prototype and deploy a functional landing page that could validate key business hypotheses about the healthcare staffing marketplace concept.
 
-- **Frontend**: Pure HTML5, CSS3, Vanilla JavaScript
-- **Fonts**: Inter (Google Fonts)
-- **Icons**: Custom SVG line icons
-- **Deployment**: Vercel
+## Key Features
 
-## 🎯 Validation Goals
+- **Dual-sided marketplace messaging** targeting both healthcare facilities and nurses
+- **Trust and credibility indicators** including HIPAA compliance and insurance coverage
+- **Social proof elements** with testimonials and partner hospital logos
+- **Clear value propositions** highlighting cost savings and scheduling flexibility
+- **Mobile-responsive design** optimized for healthcare professionals on-the-go
+- **Conversion-focused layout** with prominent sign-up forms and calls-to-action
 
-This MVP landing page tests:
-- Market demand for nurse staffing solutions
-- Value proposition clarity for both user segments
-- Trust and credibility factors
-- Conversion potential through sign-up forms
+## Technical Implementation
 
-## 🚀 Quick Start
+**Frontend**: HTML5, CSS3, JavaScript  
+**Typography**: Inter font family  
+**Icons**: Custom SVG graphics  
+**Hosting**: Vercel static deployment  
+**Development Approach**: No-framework vanilla web technologies for rapid prototyping
 
-1. Clone the repository
-2. Open `index.html` in a browser
-3. Or deploy to Vercel for live demo
+## Design Principles
 
-## 📁 Project Structure
+The visual design follows healthcare industry standards with a clean, professional aesthetic:
+
+- **Color Palette**: Primary blue (#1e88e5) and accent teal (#26a69a) for trust and medical associations
+- **Layout**: Grid-based responsive design with mobile-first approach  
+- **Typography**: Clear hierarchy with accessible contrast ratios
+- **Interactions**: Subtle animations and hover states for enhanced user experience
+
+## MVP Validation Strategy
+
+This landing page prototype specifically tests critical business assumptions required for Part 2 of the assignment:
+
+### Primary Validation Questions:
+1. **Market Pain Point**: Do healthcare facilities experience significant challenges with nursing shift coverage?
+2. **Value Proposition Clarity**: Is the "hours not days" promise compelling enough to drive sign-ups?
+3. **Two-Sided Market Appeal**: Can a single landing page effectively communicate value to both facilities and nurses?
+4. **Trust and Credibility**: What compliance and verification factors are essential for healthcare marketplace adoption?
+5. **Conversion Potential**: Will the dual sign-up approach (clinic vs. nurse tabs) generate meaningful user interest?
+
+### Assignment Requirements Met:
+- ✅ Company name prominently displayed
+- ✅ Professional healthcare imagery and branding
+- ✅ Dual sign-in/sign-up interface with role selection
+- ✅ Clear calls-to-action throughout the page
+- ✅ No backend infrastructure (pure frontend prototype)
+
+## Project Structure
 
 ```
-es30/
 ├── index.html              # Main landing page
-├── nursenow_wordmark.svg   # Brand logo
-└── README.md              # This file
+├── nursenow_wordmark.svg   # Brand logo asset
+└── README.md              # Project documentation
 ```
 
-## 🎨 Design System
+## Development Approach
 
-- **Primary Color**: #1e88e5 (Blue)
-- **Accent Color**: #26a69a (Teal)  
-- **Typography**: Inter font family
-- **Layout**: CSS Grid + Flexbox
-- **Animations**: CSS transitions and keyframes
+**AI-Powered Development**: This project utilized AI-powered "vibe coding" tools as required by the assignment, demonstrating rapid prototyping capabilities for startup MVPs. The development process involved iterative prompt engineering to achieve professional-grade results suitable for real market validation.
 
-## 📱 Responsive Design
+**Technical Excellence**: Built using modern web standards with focus on performance and accessibility. The codebase demonstrates clean HTML structure, efficient CSS organization, and progressive enhancement principles suitable for production deployment.
 
-- Desktop: Multi-column layouts with sidebar forms
-- Tablet: Stacked sections with optimized spacing  
-- Mobile: Single column with touch-friendly buttons
+**Deployment**: Leveraged Vercel for instant deployment and hosting, enabling real user testing and data collection capabilities essential for MVP validation.
 
 ---
 
-Built for ES30 - Entrepreneurship course MVP assignment
+**Academic Context**: Harvard University, Faculty of Arts & Sciences  
+**Course**: ENG-SCI 30: Startups: From Idea to Exit  
+**Assignment**: #3 - MVPs, In Theory and Practice

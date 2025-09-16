@@ -132,10 +132,10 @@
         }
 
         .section-divider {
-            height: 2px;
+            height: 1px;
             background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%);
-            margin: 80px auto;
-            max-width: 200px;
+            margin: 100px auto;
+            max-width: 300px;
         }
 
         /* Navigation */
@@ -293,6 +293,8 @@
             gap: 48px;
             margin-bottom: 48px;
             animation: fadeInUp 1s ease 0.4s both;
+            justify-content: flex-start;
+            flex-wrap: wrap;
         }
 
         .stat-item {
@@ -626,7 +628,8 @@
         .value-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 100px;
+            gap: 120px;
+            margin-top: 80px;
         }
 
         .value-column {
@@ -718,25 +721,36 @@
         }
 
         .hospital-logo {
-            height: 48px;
-            padding: 12px 24px;
+            height: 64px;
+            width: 140px;
+            padding: 16px 20px;
             background: white;
             border: 2px solid var(--border);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--sub-ink);
-            font-weight: 600;
-            font-size: 14px;
             transition: all 0.3s ease;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            position: relative;
+            overflow: hidden;
         }
 
         .hospital-logo:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             border-color: var(--primary);
+        }
+
+        .hospital-logo svg {
+            max-width: 100%;
+            max-height: 100%;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .hospital-logo:hover svg {
+            opacity: 1;
         }
 
         .testimonials {
@@ -1272,39 +1286,80 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Mobile button improvements */
+        /* Mobile optimizations */
         @media (max-width: 768px) {
             .btn {
                 min-height: 48px;
                 font-size: 16px;
                 padding: 16px 24px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero-content {
+                gap: 40px;
+            }
+
+            .signup-module {
+                padding: 32px 24px 24px 24px;
+                margin-top: 12px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-sm {
+                padding: 60px 0;
             }
             .nav-links {
                 display: none;
             }
 
+            .nav-cta {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
             .hero-content {
                 grid-template-columns: 1fr;
-                gap: 48px;
+                gap: 40px;
             }
 
             .hero-stats {
                 justify-content: center;
+                gap: 32px;
+                flex-wrap: wrap;
             }
 
             .hero-ctas {
                 justify-content: center;
+                flex-direction: column;
+                gap: 12px;
             }
 
             .signup-badge {
                 position: static;
                 display: inline-block;
-                margin: 0 auto 20px;
+                margin: 0 auto 16px;
                 text-align: center;
+                font-size: 10px;
+                padding: 6px 16px;
             }
 
             .trust-grid {
-                gap: 32px;
+                gap: 24px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
             }
 
             .value-grid {
@@ -1312,9 +1367,25 @@
                 gap: 60px;
             }
 
+            .value-item {
+                padding: 24px 16px;
+                margin-bottom: 24px;
+            }
+
+            .logo-strip {
+                gap: 32px;
+                justify-content: center;
+            }
+
+            .hospital-logo {
+                height: 40px;
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+
             .steps {
                 grid-template-columns: 1fr;
-                gap: 48px;
+                gap: 40px;
             }
 
             .steps::before {
@@ -1323,10 +1394,20 @@
 
             .testimonials {
                 grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .testimonial {
+                padding: 24px;
             }
 
             .faq-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .faq-item {
+                padding: 24px;
             }
 
             .footer-content {
@@ -1337,18 +1418,27 @@
 
             .footer-bottom {
                 flex-direction: column;
-                gap: 24px;
+                gap: 20px;
                 text-align: center;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 12px;
             }
 
-            .btn {
-                width: 100%;
-                justify-content: center;
+            .pricing-features {
+                gap: 16px;
+            }
+
+            .pricing-card {
+                padding: 32px 24px;
+                margin: 0 16px;
+            }
+
+            .container {
+                padding: 0 20px;
             }
         }
 
@@ -1632,11 +1722,44 @@
                 <h2 class="h2">Trusted by leading healthcare organizations</h2>
             </div>
             <div class="logo-strip">
-                <div class="hospital-logo">Cedar Sinai</div>
-                <div class="hospital-logo">Mayo Clinic</div>
-                <div class="hospital-logo">Johns Hopkins</div>
-                <div class="hospital-logo">Cleveland Clinic</div>
-                <div class="hospital-logo">Mount Sinai</div>
+                <div class="hospital-logo">
+                    <svg viewBox="0 0 120 40" fill="none">
+                        <rect x="10" y="15" width="8" height="10" fill="#2563eb" rx="1"/>
+                        <rect x="22" y="12" width="8" height="16" fill="#2563eb" rx="1"/>
+                        <rect x="34" y="8" width="8" height="24" fill="#2563eb" rx="1"/>
+                        <text x="50" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2937">Cedar-Sinai</text>
+                    </svg>
+                </div>
+                <div class="hospital-logo">
+                    <svg viewBox="0 0 120 40" fill="none">
+                        <circle cx="20" cy="20" r="12" fill="none" stroke="#dc2626" stroke-width="2"/>
+                        <path d="M20 14v12M14 20h12" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+                        <text x="38" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2937">Mayo Clinic</text>
+                    </svg>
+                </div>
+                <div class="hospital-logo">
+                    <svg viewBox="0 0 140 40" fill="none">
+                        <rect x="8" y="12" width="16" height="16" fill="#1e40af" rx="2"/>
+                        <path d="M16 18v4M12 20h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <text x="30" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#1f2937">Johns Hopkins</text>
+                        <text x="30" y="28" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#1f2937">Medicine</text>
+                    </svg>
+                </div>
+                <div class="hospital-logo">
+                    <svg viewBox="0 0 140 40" fill="none">
+                        <circle cx="18" cy="20" r="10" fill="#059669"/>
+                        <text x="18" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">C</text>
+                        <text x="35" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#1f2937">Cleveland</text>
+                        <text x="35" y="28" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#1f2937">Clinic</text>
+                    </svg>
+                </div>
+                <div class="hospital-logo">
+                    <svg viewBox="0 0 120 40" fill="none">
+                        <path d="M12 8l8 12-8 12h16l-8-12 8-12H12z" fill="#7c3aed"/>
+                        <text x="35" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#1f2937">Mount Sinai</text>
+                        <text x="35" y="28" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#1f2937">Health System</text>
+                    </svg>
+                </div>
             </div>
             <div class="testimonials">
                 <div class="testimonial">
@@ -1724,19 +1847,21 @@
                     </div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 60px;">
-                <a href="#" class="btn btn-primary" style="margin-right: 16px; color: var(--primary); background: white;">
-                    Start free trial
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                    </svg>
-                </a>
-                <a href="#" class="btn btn-secondary" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">
-                    Schedule demo
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                </a>
+            <div style="text-align: center; margin-top: 80px;">
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-primary" style="color: var(--primary); background: white; box-shadow: 0 4px 12px rgba(30, 136, 229, 0.15);">
+                        Start free trial
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="btn btn-secondary" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">
+                        Schedule demo
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
